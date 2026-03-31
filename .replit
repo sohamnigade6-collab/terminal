@@ -57,3 +57,10 @@ externalPort = 80
 deploymentTarget = "autoscale"
 run = ["bash", "-c", "cd backend && bun run start & cd frontend && bun run build && npx serve -s dist -l 5000"]
 build = ["bash", "-c", "cd frontend && bun install && bun run build && cd ../backend && bun install"]
+
+[userenv]
+
+[userenv.shared]
+ALPACA_KEY_ID = "PKCWR4AIFZR3GHGBGARYEBQANU"
+ALPACA_SECRET_KEY = "9wfEBprDdwrWkjtiuDQryhih1TUTmK2fBe4bDS7Uv8iX"
+ALPACA_BASE_URL = "https://paper-api.alpaca.markets"
