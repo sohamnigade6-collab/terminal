@@ -22,32 +22,32 @@ button {
   font: inherit;
 }
 
-/* Bloomberg Terminal palette — everything goes through these vars */
+/* Green/Black Terminal palette */
 :root {
-  --bb-black: #000000;
-  --bb-bg: #040404;
-  --bb-bg2: #0c0c0c;
-  --bb-bg3: #141414;
-  --bb-border: #1e1e1e;
-  --bb-border2: #2a2a2a;
+  --bb-black: #060806;
+  --bb-bg: #080a08;
+  --bb-bg2: #0d120d;
+  --bb-bg3: #121812;
+  --bb-border: #1a221a;
+  --bb-border2: #202c20;
 
-  --bb-orange: #ff6600;
-  --bb-orange2: #cc5200;
-  --bb-orange-bg: rgba(255, 102, 0, 0.1);
+  --bb-orange: #00e676;
+  --bb-orange2: #00b84a;
+  --bb-orange-bg: rgba(0, 230, 118, 0.08);
 
   --bb-white: #e8e8e8;
-  --bb-gray: #787878;
-  --bb-gray2: #444;
-  --bb-gray3: #282828;
+  --bb-gray: #6a7a6a;
+  --bb-gray2: #384038;
+  --bb-gray3: #1e281e;
 
   --bb-up: #00e676;
   /* green */
-  --bb-down: #ff3333;
+  --bb-down: #ff3d3d;
   /* red */
-  --bb-cyan: #00c8ff;
-  /* accent / INFO */
-  --bb-yellow: #f0c040;
-  /* MEDIUM */
+  --bb-cyan: #00e676;
+  /* accent — unified to green */
+  --bb-yellow: #a8d880;
+  /* MEDIUM — soft green-yellow */
 
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
@@ -94,7 +94,8 @@ body {
 .titlebar {
   flex-shrink: 0;
   height: var(--titlebar-h);
-  background: var(--bb-orange);
+  background: var(--bb-black);
+  border-bottom: 1px solid var(--bb-border2);
   display: flex;
   align-items: center;
   padding: 0 8px;
@@ -105,7 +106,7 @@ body {
 .titlebar-logo {
   font-size: 11px;
   font-weight: 700;
-  color: #000;
+  color: var(--bb-orange);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-right: 12px;
@@ -118,7 +119,7 @@ body {
   display: inline-block;
   width: 5px;
   height: 5px;
-  background: #000;
+  background: var(--bb-orange);
   border-radius: 50%;
   animation: blink 1.5s step-end infinite;
 }
@@ -138,7 +139,7 @@ body {
 .titlebar-sep {
   width: 1px;
   height: 14px;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bb-border2);
   margin: 0 8px;
   flex-shrink: 0;
 }
@@ -146,7 +147,7 @@ body {
 .titlebar-path {
   font-size: 10px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--bb-gray);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -164,13 +165,13 @@ body {
 .titlebar-clock {
   font-size: 10px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--bb-white);
   letter-spacing: 0.05em;
 }
 
 .titlebar-loc {
   font-size: 10px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--bb-gray);
   display: flex;
   align-items: center;
   gap: 2px;
@@ -179,7 +180,8 @@ body {
 .titlebar-alert {
   font-size: 10px;
   font-weight: 700;
-  background: #000;
+  background: var(--bb-orange-bg);
+  border: 1px solid rgba(0, 230, 118, 0.3);
   color: var(--bb-orange);
   padding: 1px 6px;
   letter-spacing: 0.05em;
@@ -194,16 +196,18 @@ body {
   gap: 3px;
   padding: 1px 5px;
   font-size: 10px;
-  color: rgba(0, 0, 0, 0.7);
-  background: rgba(0, 0, 0, 0.12);
+  color: var(--bb-gray);
+  background: var(--bb-bg3);
+  border: 1px solid var(--bb-border2);
   transition: background 0.1s;
   font-family: var(--font-mono);
   font-weight: 500;
 }
 
 .titlebar-btn:hover {
-  background: rgba(0, 0, 0, 0.25);
-  color: #000;
+  background: var(--bb-bg2);
+  color: var(--bb-orange);
+  border-color: var(--bb-orange2);
 }
 
 .titlebar-btn:disabled {
@@ -1041,13 +1045,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 6px 12px;
-  background: var(--bb-orange);
+  background: var(--bb-bg3);
+  border-bottom: 1px solid var(--bb-border2);
 }
 
 .modal-title {
   font-size: 10px;
   font-weight: 700;
-  color: #000;
+  color: var(--bb-orange);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: flex;
@@ -1057,7 +1062,7 @@ body {
 
 .modal-close {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--bb-gray);
   padding: 0;
   display: flex;
   align-items: center;
@@ -1065,7 +1070,7 @@ body {
 }
 
 .modal-close:hover {
-  color: #000;
+  color: var(--bb-white);
 }
 
 .modal-body {
@@ -1162,7 +1167,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: #ff8033;
+  background: var(--bb-orange2);
+  border-color: var(--bb-orange2);
 }
 
 /* ── Loading / empty / error ────────────────────────────────────────── */
