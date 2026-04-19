@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   Globe, TrendingUp, MapPin, Brain,
   AlertTriangle, RefreshCw, Settings as SettingsIcon,
-  Wifi, WifiOff, CandlestickChart, LogOut, User,
+  Wifi, WifiOff, CandlestickChart, LogOut, User, ShieldCheck,
 } from 'lucide-react'
 import { useSettings } from './hooks/useSettings.ts'
 import { useDashboard } from './hooks/useDashboard.ts'
@@ -14,6 +14,7 @@ import { IntelPanel } from './components/IntelPanel.tsx'
 import { TradingPanel } from './components/TradingPanel.tsx'
 import { LoginScreen } from './components/LoginScreen.tsx'
 import { SettingsModal } from './components/SettingsModal.tsx'
+import { AdminPanel } from './components/AdminPanel.tsx'
 import './index.css'
 
 type TabId = 'news' | 'markets' | 'local' | 'intel' | 'trading'
@@ -32,6 +33,7 @@ export default function App() {
   const { state, fetchData, fetchIntel } = useDashboard(settings)
   const [activeTab, setActiveTab] = useState<TabId>('news')
   const [showSettings, setShowSettings] = useState(false)
+  const [showAdmin, setShowAdmin] = useState(false)
   const [now, setNow] = useState(() => new Date())
 
   useEffect(() => {
@@ -142,6 +144,10 @@ export default function App() {
           <button className="titlebar-btn" onClick={fetchData} title="REFRESH" disabled={isRefreshing}>
             <RefreshCw size={9} className={isRefreshing ? 'spin-icon' : ''} />
             F6
+          </button>
+          <button className="titlebar-btn" onClick={() => setShowAdmin(true)} title="ADMIN">
+            <ShieldCheck size={9} />
+            ADM
           </button>
           <button className="titlebar-btn" onClick={() => setShowSettings(true)} title="SETTINGS">
             <SettingsIcon size={9} />
@@ -254,6 +260,9 @@ export default function App() {
 
       {showSettings && (
         <SettingsModal settings={settings} onSave={save} onClose={() => setShowSettings(false)} />
+      )}
+      {showAdmin && (
+        <AdminPanel onClose={() => setShowAdmin(false)} />
       )}
     </>
   )
