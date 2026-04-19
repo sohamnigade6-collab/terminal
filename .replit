@@ -59,8 +59,8 @@ externalPort = 3000
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["bash", "-c", "cd backend && bun run start & cd frontend && bun run build && npx serve -s dist -l 5000"]
-build = ["bash", "-c", "cd frontend && bun install && bun run build && cd ../backend && bun install"]
+run = ["bash", "-c", "(cd backend && bun run start) & (sleep 2 && cd frontend && bun run preview)"]
+build = ["bash", "-c", "cd frontend && bun run build"]
 
 [userenv]
 
