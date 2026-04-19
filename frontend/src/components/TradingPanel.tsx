@@ -70,6 +70,11 @@ function TradingViewChart({ symbol }: { symbol: string }) {
         if (!containerRef.current) return
         containerRef.current.innerHTML = ''
 
+        const wrapper = document.createElement('div')
+        wrapper.style.width = '100%'
+        wrapper.style.height = '100%'
+        containerRef.current.appendChild(wrapper)
+
         const script = document.createElement('script')
         script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js'
         script.async = true
@@ -101,12 +106,12 @@ function TradingViewChart({ symbol }: { symbol: string }) {
                 'mainSeriesProperties.candleStyle.borderDownColor': '#ff3d3d',
             },
         })
-        document.head.appendChild(script)
+        wrapper.appendChild(script)
         scriptRef.current = script
 
         return () => {
-            if (scriptRef.current && document.head.contains(scriptRef.current)) {
-                document.head.removeChild(scriptRef.current)
+            if (containerRef.current) {
+                containerRef.current.innerHTML = ''
             }
         }
     }, [symbol])

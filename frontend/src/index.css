@@ -1302,10 +1302,12 @@ body {
 
 .trading-chart-col {
   flex-shrink: 0;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  /* width is set via inline style from JS */
+  overflow: hidden;
+  /* width set via inline style */
 }
 
 .trading-chart-header {
@@ -1331,9 +1333,10 @@ body {
 }
 
 .trading-chart-body {
-  flex: 1;
+  flex: 1 1 0;
   min-height: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .trading-symbol-bar {
