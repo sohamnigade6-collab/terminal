@@ -80,7 +80,7 @@ function TradingViewChart({ symbol }: { symbol: string }) {
         script.async = true
         script.innerHTML = JSON.stringify({
             autosize: true,
-            symbol: `NASDAQ:${symbol}`,
+            symbol: symbol,
             interval: 'D',
             timezone: 'Etc/UTC',
             theme: 'dark',
@@ -466,6 +466,7 @@ export function TradingPanel() {
                                     className="order-input"
                                     value={symbol}
                                     onChange={(e) => setSymbol(e.target.value.toUpperCase())}
+                                    onKeyDown={(e) => e.key === 'Enter' && loadSymbol()}
                                     placeholder="AAPL"
                                     maxLength={10}
                                 />
