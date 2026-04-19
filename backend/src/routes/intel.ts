@@ -27,7 +27,7 @@ router.post('/brief', async (c) => {
 
     if (!apiKey) {
         return c.json({
-            summary: 'No OPENAI_API_KEY set. Add it to blossom/backend/.env to enable AI briefings.',
+            summary: 'No OPENAI_API_KEY set. Add it to aob/backend/.env to enable AI briefings.',
             threats: [],
             countryRisks: [],
             generatedAt: new Date().toISOString(),
@@ -127,7 +127,7 @@ router.post('/local-brief', async (c) => {
 
     if (!apiKey) {
         return c.json({
-            summary: `No OPENAI_API_KEY set. Add it to blossom/backend/.env to enable local briefings.`,
+            summary: `No OPENAI_API_KEY set. Add it to aob/backend/.env to enable local briefings.`,
             generatedAt: new Date().toISOString(),
             model: 'none',
         })

@@ -22,7 +22,7 @@ interface AuthContextValue extends AuthState {
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
-const SESSION_KEY = 'blossom_session'
+const SESSION_KEY = 'aob_session'
 
 export function AuthProvider({ children }: { children: ReactNode }) {
     const [state, setState] = useState<AuthState>({

@@ -1,4 +1,4 @@
-# Blossom Terminal
+# AOB — Alpha Over Beta Terminal
 
 A Bloomberg-style intelligence terminal with a dark terminal aesthetic (near-black + neon green). Shows global news, markets, local weather, AI Intel Brief, and a Trading tab with live Alpaca paper trading.
 

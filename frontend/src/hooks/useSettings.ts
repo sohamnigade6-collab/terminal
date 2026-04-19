@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import type { Settings } from '../types.ts'
 import { DEFAULT_SETTINGS } from '../types.ts'
 
-const STORAGE_KEY = 'blossom:settings'
+const STORAGE_KEY = 'aob:settings'
 
 export function useSettings() {
     const [settings, setSettings] = useState<Settings>(() => {

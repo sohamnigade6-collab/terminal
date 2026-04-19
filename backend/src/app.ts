@@ -29,7 +29,7 @@ app.use(
 
 app.use('*', logger())
 
-app.get('/', (c) => c.json({ name: 'blossom-api', version: '1.0.0', status: 'ok' }))
+app.get('/', (c) => c.json({ name: 'aob-api', version: '1.0.0', status: 'ok' }))
 
 app.route('/auth', authRouter)
 app.route('/news', newsRouter)

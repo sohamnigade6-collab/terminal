@@ -97,7 +97,7 @@ export default function App() {
       <div className="titlebar">
         <div className="titlebar-logo">
           <span className="logo-dot" />
-          BLOSSOM
+          AOB
         </div>
 
         <div className="titlebar-sep" />

@@ -35,7 +35,7 @@ export function LoginScreen() {
                 {/* Logo */}
                 <div className="login-logo">
                     <span className="logo-dot" style={{ width: 8, height: 8 }} />
-                    <span>BLOSSOM</span>
+                    <span>AOB</span>
                 </div>
                 <div className="login-subtitle">INTELLIGENCE TERMINAL</div>
 
