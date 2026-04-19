@@ -7,8 +7,12 @@ const router = new Hono()
 
 const GOOGLE_CLIENT_ID = (process.env.GOOGLE_CLIENT_ID ?? '').trim()
 const GOOGLE_CLIENT_SECRET = (process.env.GOOGLE_CLIENT_SECRET ?? '').trim()
-const REPLIT_DOMAIN = process.env.REPLIT_DEV_DOMAIN ?? 'localhost:5000'
-const REDIRECT_URI = `https://${REPLIT_DOMAIN}/api/auth/google/callback`
+
+// BACKEND_URL is set in production (Vercel). Falls back to Replit dev domain locally.
+const BACKEND_URL = process.env.BACKEND_URL
+    ? process.env.BACKEND_URL.replace(/\/$/, '')
+    : `https://${process.env.REPLIT_DEV_DOMAIN ?? 'localhost:3001'}`
+const REDIRECT_URI = `${BACKEND_URL}/api/auth/google/callback`
 const SESSION_TTL_DAYS = 30
 
 function randomToken(bytes = 32): string {

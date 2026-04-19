@@ -8,7 +8,8 @@ export function getPool(): pg.Pool {
     if (!pool) {
         pool = new Pool({
             connectionString: process.env.DATABASE_URL,
-            ssl: process.env.DATABASE_URL?.includes('sslmode=require')
+            ssl: (process.env.DATABASE_URL?.includes('sslmode=require') ||
+              process.env.DATABASE_URL?.includes('neon.tech'))
                 ? { rejectUnauthorized: false }
                 : false,
         })
