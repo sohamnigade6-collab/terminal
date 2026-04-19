@@ -1,0 +1,9 @@
+{
+    "name": "aob-terminal",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "cd frontend && bun run build",
+        "start": "cd backend && PUBLIC_DIR=../frontend/dist bun run start"
+    }
+}
