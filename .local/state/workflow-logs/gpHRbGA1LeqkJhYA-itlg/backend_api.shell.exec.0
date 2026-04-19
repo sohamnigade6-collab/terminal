@@ -1,0 +1,5 @@
+[0m[2m[35m$[0m [2m[1mbun run --watch src/index.ts[0m
+[1m175 | [0m            ((data.latestQuote?.ap ?? [0m[33m0[0m) + (data.latestQuote?.bp ?? [0m[33m0[0m)) / [0m[33m2[0m ||
+                                                                                  [1m[31m[1m^[0m
+[31merror[0m[2m: [0m[1mUnexpected ||[0m
+    [2mat [0m[36m/home/runner/workspace/backend/src/routes/trading.ts[0m[2m:[0m[33m175[0m[2m:[0m[33m77[0m

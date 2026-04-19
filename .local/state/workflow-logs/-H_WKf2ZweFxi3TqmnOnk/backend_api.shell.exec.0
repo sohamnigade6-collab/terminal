@@ -1,0 +1,84 @@
+[0m[2m[35m$[0m [2m[1mbun run --watch src/index.ts[0m
+AOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 86ms
+<-- GET /api/trading/quote/VOO
+--> GET /api/trading/quote/VOO [31m500[0m 26ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 86ms
+<-- GET /api/trading/quote/VOO
+--> GET /api/trading/quote/VOO [31m500[0m 26ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+<-- GET /api/markets
+<-- GET /api/news/global
+<-- GET /api/news/local?city=coppell&country=ID
+<-- GET /api/trading/positions
+<-- GET /api/trading/account
+--> GET /api/trading/positions [32m200[0m 31ms
+--> GET /api/trading/account [32m200[0m 92ms
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/markets [32m200[0m 176ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 50ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+--> GET /api/news/global [32m200[0m 283ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 469ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 618ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/trading/account
+--> GET /api/trading/account [32m200[0m 33ms
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 28ms
+<-- GET /api/trading/positions
+<-- GET /api/trading/account
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+--> GET /api/trading/positions [32m200[0m 28ms
+--> GET /api/trading/account [32m200[0m 29ms
+<-- GET /api/trading/orders?status=all&limit=30
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 32ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 99ms
+<-- GET /api/trading/quote/VOO
+--> GET /api/trading/quote/VOO [31m500[0m 27ms
+[0m[31merror[0m[2m:[0m script [1m"dev"[0m was terminated by signal SIGTERM [2m(Polite quit request)[0m[0m

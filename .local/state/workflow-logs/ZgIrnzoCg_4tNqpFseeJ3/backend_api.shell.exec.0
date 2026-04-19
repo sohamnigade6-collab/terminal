@@ -1,0 +1,330 @@
+[0m[2m[35m$[0m [2m[1mbun run --watch src/index.ts[0m
+AOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 85ms
+<-- GET /api/trading/quote/VOO
+--> GET /api/trading/quote/VOO [31m500[0m 27ms
+<-- GET /api/news/global
+<-- GET /api/news/local?city=coppell&country=ID
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+<-- GET /api/markets
+<-- GET /api/trading/account
+<-- GET /api/trading/positions
+--> GET /api/trading/account [32m200[0m 32ms
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/trading/positions [32m200[0m 162ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 97ms
+--> GET /api/markets [32m200[0m 173ms
+--> GET /api/news/global [32m200[0m 194ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 480ms
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 507ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 25ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/trading/quote/AAPL
+--> GET /api/trading/quote/AAPL [31m500[0m 88ms
+<-- GET /api/markets
+<-- GET /api/trading/account
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+<-- GET /api/news/local?city=coppell&country=ID
+<-- GET /api/news/global
+<-- GET /api/trading/positions
+--> GET /api/trading/account [32m200[0m 30ms
+--> GET /api/trading/positions [32m200[0m 82ms
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 115ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 39ms
+--> GET /api/markets [32m200[0m 165ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+--> GET /api/news/global [32m200[0m 178ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 466ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- POST /api/intel/brief
+--> POST /api/intel/brief [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/trading/account
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/trading/positions
+--> GET /api/trading/positions [32m200[0m 29ms
+--> GET /api/trading/account [32m200[0m 32ms
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 31ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/trading/orders?status=all&limit=30
+<-- GET /api/trading/account
+<-- GET /api/trading/positions
+--> GET /api/trading/account [32m200[0m 31ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 31ms
+--> GET /api/trading/positions [32m200[0m 80ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 1ms
+<-- GET /api/trading/account
+<-- GET /api/trading/positions
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/trading/positions [32m200[0m 29ms
+--> GET /api/trading/account [32m200[0m 31ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 32ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/trading/orders?status=all&limit=30
+<-- GET /api/trading/positions
+<-- GET /api/trading/account
+--> GET /api/trading/positions [32m200[0m 28ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 32ms
+--> GET /api/trading/account [32m200[0m 32ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/trading/positions
+<-- GET /api/trading/account
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/trading/positions [32m200[0m 28ms
+--> GET /api/trading/account [32m200[0m 30ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 32ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/trading/account
+<-- GET /api/trading/positions
+<-- GET /api/trading/orders?status=all&limit=30
+--> GET /api/trading/positions [32m200[0m 29ms
+--> GET /api/trading/account [32m200[0m 31ms
+--> GET /api/trading/orders?status=all&limit=30 [32m200[0m 33ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 0ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/news/global
+<-- GET /api/markets
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=coppell
+<-- GET /api/news/local?city=coppell&country=ID
+--> GET /api/markets [32m200[0m 153ms
+--> GET /api/news/global [32m200[0m 206ms
+--> GET /api/news/local?city=coppell&country=ID [32m200[0m 408ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=coppell [32m200[0m 467ms
+[0m[31merror[0m[2m:[0m script [1m"dev"[0m was terminated by signal SIGTERM [2m(Polite quit request)[0m[0m

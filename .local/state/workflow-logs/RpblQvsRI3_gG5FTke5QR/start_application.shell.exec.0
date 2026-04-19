@@ -1,0 +1,859 @@
+[0m[2m[35m$[0m [2m[1mvite[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m790[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.31.111.226:[1m5000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/AuthContext.tsx[22m
+[2m7:09:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/contexts/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m7:09:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/contexts/AuthContext.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/LoginScreen.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=Jakarta&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=Jakarta&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=Jakarta&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:09:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x2)[39m[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:10:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+undefined[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+undefined [33m(x2)[39m[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+undefined [33m(x3)[39m[0m
+[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x2)[39m[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x3)[39m[0m
+[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/intel/brief[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/intel/brief[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x2)[39m[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/intel/brief[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x3)[39m[0m
+[0m[31m[2m7:10:05 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:14:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=Jakarta[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=Jakarta&country=ID[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+undefined[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m7:15:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:21:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:21:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:21:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:21:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:22:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:22:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:28:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:28:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:28:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:28:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x2)[39m

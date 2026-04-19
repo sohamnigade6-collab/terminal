@@ -1,0 +1,1391 @@
+[0m[2m[35m$[0m [2m[1mvite[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m921[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.31.68.162:[1m5000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:02:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:02:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x2)[39m
+[0m[31m[2m8:08:13 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:13 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:13 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:13 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:17 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:17 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:17 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:17 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:18 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:18 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:18 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:18 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:19 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:19 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:19 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[0m[31m[2m8:08:21 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native) [33m(x2)[39m[0m
+[0m[31m[2m8:08:21 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:21 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:22 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:22 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:22 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:22 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:23 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:23 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:23 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:23 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:08:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:27 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:28 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:32 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:32 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:32 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:32 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:33 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:33 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:33 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:33 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:08:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/me[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/me[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:34 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:35 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:35 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:35 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:36 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/quote/AAPL[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:36 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/google[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:37 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:37 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:37 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:37 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:37 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/google[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:42 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:42 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:42 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:42 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:46 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:46 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:46 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:47 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:47 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:47 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:47 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:08:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+[0m[31m[2m8:08:49 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:49 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:49 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:50 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/quote/AAPL[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:52 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:08:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AdminPanel.tsx[22m
+[0m[31m[2m8:08:57 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:57 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:57 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:08:57 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:00 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:09:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AdminPanel.tsx[22m
+[0m[31m[2m8:09:10 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:10 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:10 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:09:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:09:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m [33m(x2)[39m
+[0m[31m[2m8:09:20 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:20 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:20 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:09:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[0m[31m[2m8:09:30 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:30 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:30 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:09:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/positions[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/account[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/trading/orders?status=all&limit=30[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:10:40 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:27:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[0m[31m[2m8:27:59 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/global[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:27:59 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:27:59 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/markets[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+[0m[31m[2m8:27:59 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/news/local?city=coppell&country=ID[39m
+Error: ECONNREFUSED
+    at <anonymous> (node:_http_client:246:19)
+    at processTicksAndRejections (native)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:28:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:28:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:28:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:28:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:29:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:29:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:29:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:29:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:29:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[0m[31m[2m8:30:14 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/weather?lat=-6.2&lon=106.8&city=coppell[39m
+undefined[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:31:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:31:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:32:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:32:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/TradingPanel.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:43:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:43:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:43:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m

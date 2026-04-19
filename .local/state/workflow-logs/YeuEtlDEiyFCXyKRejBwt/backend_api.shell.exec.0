@@ -1,0 +1,1091 @@
+[0m[2m[35m$[0m [2m[1mbun run --watch src/index.ts[0m
+AOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api
+--> GET /api [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 150ms
+<-- GET /api/auth/me
+--> GET /api/auth/me [32m200[0m 0ms
+<-- GET /api/auth/me
+--> GET /api/auth/me [32m200[0m 28ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+<-- GET /api/news/global
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+--> GET /api/news/global [32m200[0m 199ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 471ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 491ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- POST /api/intel/brief
+--> POST /api/intel/brief [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- POST /api/intel/brief
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+--> POST /api/intel/brief [32m200[0m 27ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- POST /api/intel/brief
+--> POST /api/intel/brief [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- POST /api/intel/brief
+--> POST /api/intel/brief [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+--> GET /api/markets [32m200[0m 172ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+<-- GET /api/news/local?city=Jakarta&country=ID
+<-- GET /api/news/global
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 154ms
+--> GET /api/news/global [32m200[0m 245ms
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 400ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 470ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 3ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+[2J[3J[H[2J[3J[HAOB API running on http://localhost:3001
+Started development server: http://localhost:3001
+<-- GET /api/markets
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+<-- GET /api/news/global
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/markets [32m200[0m 198ms
+--> GET /api/news/global [32m200[0m 242ms
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 396ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 481ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+[2J[3J[H[2J[3J[HStarted development server: http://localhost:3001
+[migrate] schema ready
+AOB API running on http://localhost:3001
+<-- GET /api/news/global
+<-- GET /api/markets
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 148ms
+--> GET /api/news/global [32m200[0m 172ms
+--> GET /api/markets [32m200[0m 179ms
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 471ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 1ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta
+--> GET /api/weather?lat=-6.2&lon=106.8&city=Jakarta [32m200[0m 0ms
+<-- GET /api/markets
+--> GET /api/markets [32m200[0m 0ms
+<-- GET /api/news/local?city=Jakarta&country=ID
+--> GET /api/news/local?city=Jakarta&country=ID [32m200[0m 0ms
+<-- GET /api/news/global
+--> GET /api/news/global [32m200[0m 1ms
+[0m[31merror[0m[2m:[0m script [1m"dev"[0m was terminated by signal SIGTERM [2m(Polite quit request)[0m[0m
