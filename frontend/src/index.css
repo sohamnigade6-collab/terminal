@@ -1290,6 +1290,102 @@ body {
   display: flex;
 }
 
+/* ── TradingView widget full-pane tabs (Events, Screener) ────────────────── */
+.tab-pane-tv {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.tab-pane-tv .tradingview-widget-container,
+.tab-pane-tv .tradingview-widget-container__widget {
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Yield Curve pane ────────────────────────────────────────────────────── */
+.tab-pane-yield {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.yield-curve-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 700px;
+  font-family: var(--font-mono);
+}
+
+.yield-curve-main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 0;
+  min-height: 380px;
+}
+
+.yield-curve-chart-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+.yield-curve-chart-wrap .tradingview-widget-container {
+  position: absolute;
+  inset: 0;
+}
+
+.yield-curve-section-label {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--bb-gray);
+  padding: 8px 16px 6px;
+  border-bottom: 1px solid var(--bb-border);
+  background: var(--bb-bg);
+  flex-shrink: 0;
+}
+.yield-curve-section-label--mini {
+  margin-top: 0;
+  border-top: 1px solid var(--bb-border);
+}
+
+.yield-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 240px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--bb-border);
+}
+
+.yield-mini-card {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--bb-border);
+  overflow: hidden;
+}
+.yield-mini-card:last-child { border-right: none; }
+
+.yield-mini-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--bb-orange);
+  padding: 6px 10px 4px;
+  border-bottom: 1px solid var(--bb-border);
+  flex-shrink: 0;
+}
+
+.yield-mini-card .tradingview-widget-container {
+  flex: 1;
+  min-height: 0;
+}
+
 .trading-layout {
   display: flex;
   width: 100%;
