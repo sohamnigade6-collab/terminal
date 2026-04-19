@@ -53,18 +53,43 @@ function buildApp() {
 
     // Static file serving (production only — when PUBLIC_DIR is set)
     if (PUBLIC_DIR) {
+        const MIME: Record<string, string> = {
+            '.html': 'text/html; charset=utf-8',
+            '.js':   'text/javascript; charset=utf-8',
+            '.mjs':  'text/javascript; charset=utf-8',
+            '.css':  'text/css; charset=utf-8',
+            '.json': 'application/json',
+            '.png':  'image/png',
+            '.jpg':  'image/jpeg',
+            '.jpeg': 'image/jpeg',
+            '.gif':  'image/gif',
+            '.svg':  'image/svg+xml',
+            '.ico':  'image/x-icon',
+            '.woff': 'font/woff',
+            '.woff2':'font/woff2',
+            '.ttf':  'font/ttf',
+            '.map':  'application/json',
+        }
+
+        function mimeFor(filePath: string): string {
+            const ext = filePath.slice(filePath.lastIndexOf('.')).toLowerCase()
+            return MIME[ext] ?? 'application/octet-stream'
+        }
+
         app.get('*', async (c) => {
             const reqPath = c.req.path
             const filePath = join(PUBLIC_DIR, reqPath === '/' ? 'index.html' : reqPath)
             const file = Bun.file(filePath)
 
             if (await file.exists()) {
-                return new Response(file)
+                return new Response(file, {
+                    headers: { 'Content-Type': mimeFor(filePath) },
+                })
             }
 
             // SPA fallback
             return new Response(Bun.file(join(PUBLIC_DIR, 'index.html')), {
-                headers: { 'Content-Type': 'text/html' },
+                headers: { 'Content-Type': 'text/html; charset=utf-8' },
             })
         })
     }
