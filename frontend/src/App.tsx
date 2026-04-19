@@ -13,7 +13,7 @@ import { MarketsPanel } from './components/MarketsPanel.tsx'
 import { LocalPanel } from './components/LocalPanel.tsx'
 import { IntelPanel } from './components/IntelPanel.tsx'
 import { TradingPanel } from './components/TradingPanel.tsx'
-import { TVEconomicCalendar } from './components/TVEconomicCalendar.tsx'
+import { EarningsPanel } from './components/EarningsPanel.tsx'
 import { TVScreener } from './components/TVScreener.tsx'
 import { LoginScreen } from './components/LoginScreen.tsx'
 import { SettingsModal } from './components/SettingsModal.tsx'
@@ -224,7 +224,7 @@ export default function App() {
       </div>
 
       {/* ── Content ──────────────────────────────────────────────────── */}
-      <main className={`tab-content ${['trading', 'earnings', 'screener'].includes(activeTab) ? 'tab-content-trading' : ''}`}>
+      <main className={`tab-content ${['trading', 'screener'].includes(activeTab) ? 'tab-content-trading' : ''}`}>
         {activeTab === 'news' && (
           <div className="tab-pane tab-pane-news">
             <NewsPanel items={state.globalNews} loading={state.loading.globalNews} error={state.errors.globalNews} />
@@ -265,8 +265,8 @@ export default function App() {
           </div>
         )}
         {activeTab === 'earnings' && (
-          <div className="tab-pane tab-pane-tv">
-            <TVEconomicCalendar />
+          <div className="tab-pane">
+            <EarningsPanel />
           </div>
         )}
         {activeTab === 'screener' && (
