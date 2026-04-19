@@ -87,6 +87,25 @@ export function AdminPanel({ onClose }: Props) {
         }
     }
 
+    const [clearingLogs, setClearingLogs] = useState(false)
+
+    const clearLogs = async () => {
+        if (!confirm('Clear all trade log entries? This cannot be undone.')) return
+        setClearingLogs(true)
+        try {
+            await fetch(`${API}/api/auth/trade-log`, {
+                method: 'DELETE',
+                headers: authHeader(),
+            })
+            setTrades([])
+            setSuccess('Trade log cleared')
+        } catch {
+            setError('Failed to clear log')
+        } finally {
+            setClearingLogs(false)
+        }
+    }
+
     const removeEmail = async (email: string) => {
         try {
             await fetch(`${API}/api/auth/allowed-emails/${encodeURIComponent(email)}`, {
@@ -231,9 +250,22 @@ export function AdminPanel({ onClose }: Props) {
                                 </div>
                             )}
 
-                            <button className="admin-refresh-btn" onClick={fetchTrades}>
-                                <RefreshCw size={9} /> REFRESH
-                            </button>
+                            <div className="admin-log-actions">
+                                <button className="admin-refresh-btn" onClick={fetchTrades}>
+                                    <RefreshCw size={9} /> REFRESH
+                                </button>
+                                <button
+                                    className="admin-clear-btn"
+                                    onClick={clearLogs}
+                                    disabled={clearingLogs || trades.length === 0}
+                                    title="Clear all trade logs"
+                                >
+                                    {clearingLogs
+                                        ? <><RefreshCw size={9} className="spin-icon" /> CLEARING...</>
+                                        : <><Trash2 size={9} /> CLEAR ALL</>
+                                    }
+                                </button>
+                            </div>
                         </div>
                     )}
                 </div>

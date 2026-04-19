@@ -195,6 +195,8 @@ export function TradingPanel() {
     const [qty, setQty] = useState('')
     const [limitPrice, setLimitPrice] = useState('')
     const [tif, setTif] = useState<TimeInForce>('day')
+    const [livePrice, setLivePrice] = useState<number | null>(null)
+    const [loadingQuote, setLoadingQuote] = useState(false)
 
     // ── Resize drag ──────────────────────────────────────────────────────────
     useEffect(() => {
@@ -219,6 +221,29 @@ export function TradingPanel() {
         isDragging.current = true
         document.body.style.cursor = 'col-resize'
     }
+
+    // ── Live price for order summary ─────────────────────────────────────────
+    const fetchQuote = useCallback(async (sym: string) => {
+        if (!sym) return
+        setLoadingQuote(true)
+        try {
+            const res = await fetch(`${API}/api/trading/quote/${encodeURIComponent(sym)}`)
+            const data = await res.json()
+            setLivePrice(typeof data.price === 'number' ? data.price : null)
+        } catch {
+            setLivePrice(null)
+        } finally {
+            setLoadingQuote(false)
+        }
+    }, [])
+
+    // Fetch quote whenever the order symbol changes (debounced 600ms)
+    useEffect(() => {
+        const trimmed = symbol.trim()
+        if (!trimmed) { setLivePrice(null); return }
+        const t = setTimeout(() => fetchQuote(trimmed), 600)
+        return () => clearTimeout(t)
+    }, [symbol, fetchQuote])
 
     // ── Data fetching ────────────────────────────────────────────────────────
     const fetchAccount = useCallback(async () => {
@@ -557,33 +582,56 @@ export function TradingPanel() {
                                 </div>
                             )}
 
-                            {qty && symbol && (
-                                <div className="order-summary">
-                                    <div className="order-summary-row">
-                                        <span>SIDE</span>
-                                        <span style={{ color: side === 'buy' ? 'var(--bb-up)' : 'var(--bb-down)', fontWeight: 700 }}>
-                                            {side.toUpperCase()}
-                                        </span>
-                                    </div>
-                                    <div className="order-summary-row">
-                                        <span>SYMBOL</span><span>{symbol}</span>
-                                    </div>
-                                    <div className="order-summary-row">
-                                        <span>QTY</span><span>{qty}</span>
-                                    </div>
-                                    <div className="order-summary-row">
-                                        <span>TYPE</span><span>{orderType.toUpperCase()}</span>
-                                    </div>
-                                    {orderType === 'limit' && limitPrice && (
+                            {qty && symbol && (() => {
+                                const qtyNum = parseFloat(qty)
+                                const priceForTotal = orderType === 'limit' && limitPrice
+                                    ? parseFloat(limitPrice)
+                                    : livePrice
+                                const total = priceForTotal && qtyNum ? qtyNum * priceForTotal : null
+                                return (
+                                    <div className="order-summary">
                                         <div className="order-summary-row">
-                                            <span>LIMIT</span><span>${limitPrice}</span>
+                                            <span>SIDE</span>
+                                            <span style={{ color: side === 'buy' ? 'var(--bb-up)' : 'var(--bb-down)', fontWeight: 700 }}>
+                                                {side.toUpperCase()}
+                                            </span>
                                         </div>
-                                    )}
-                                    <div className="order-summary-row">
-                                        <span>TIF</span><span>{tif.toUpperCase()}</span>
+                                        <div className="order-summary-row">
+                                            <span>SYMBOL</span><span>{symbol}</span>
+                                        </div>
+                                        <div className="order-summary-row">
+                                            <span>QTY</span><span>{qty}</span>
+                                        </div>
+                                        <div className="order-summary-row">
+                                            <span>TYPE</span><span>{orderType.toUpperCase()}</span>
+                                        </div>
+                                        {orderType === 'market' && (
+                                            <div className="order-summary-row">
+                                                <span>MKT PRICE</span>
+                                                <span>
+                                                    {loadingQuote ? '…' : livePrice != null ? `$${livePrice.toFixed(2)}` : '—'}
+                                                </span>
+                                            </div>
+                                        )}
+                                        {orderType === 'limit' && limitPrice && (
+                                            <div className="order-summary-row">
+                                                <span>LIMIT</span><span>${limitPrice}</span>
+                                            </div>
+                                        )}
+                                        <div className="order-summary-row">
+                                            <span>TIF</span><span>{tif.toUpperCase()}</span>
+                                        </div>
+                                        <div className="order-summary-row order-summary-total">
+                                            <span>EST. TOTAL</span>
+                                            <span style={{ color: side === 'buy' ? 'var(--bb-up)' : 'var(--bb-down)', fontWeight: 700 }}>
+                                                {total != null
+                                                    ? `$${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                                                    : orderType === 'market' && loadingQuote ? '…' : '—'}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
+                                )
+                            })()}
                         </div>
                     )}
 

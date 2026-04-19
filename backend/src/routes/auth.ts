@@ -201,4 +201,15 @@ router.get('/trade-log', async (c) => {
     }
 })
 
+// ── Admin: clear trade log ─────────────────────────────────────────────────
+router.delete('/trade-log', async (c) => {
+    if (!await requireAdmin(c)) return c.json({ error: 'Forbidden' }, 403)
+    try {
+        await query('DELETE FROM trade_log')
+        return c.json({ success: true })
+    } catch (e) {
+        return c.json({ error: String(e) }, 500)
+    }
+})
+
 export default router

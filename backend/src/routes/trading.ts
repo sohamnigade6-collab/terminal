@@ -149,6 +149,35 @@ router.get('/stock-news/:symbol', async (c) => {
     }
 })
 
+// ── Latest quote / price for a symbol ─────────────────────────────────────
+router.get('/quote/:symbol', async (c) => {
+    const symbol = c.req.param('symbol').toUpperCase()
+    try {
+        const res = await fetch(
+            `https://data.alpaca.markets/v2/stocks/${encodeURIComponent(symbol)}/bars/latest`,
+            {
+                headers: {
+                    'APCA-API-KEY-ID': KEY_ID,
+                    'APCA-API-SECRET-KEY': SECRET_KEY,
+                    Accept: 'application/json',
+                },
+                signal: AbortSignal.timeout(8000),
+            }
+        )
+        if (!res.ok) {
+            const txt = await res.text().catch(() => '')
+            console.error('[quote] Alpaca error', res.status, txt.slice(0, 200))
+            return c.json({ symbol, price: null, error: `Alpaca ${res.status}` })
+        }
+        const data = await res.json() as { bar?: { c?: number } }
+        const price = data.bar?.c ?? null
+        return c.json({ symbol, price })
+    } catch (e) {
+        console.error('[quote] fetch error:', String(e))
+        return c.json({ symbol, price: null, error: String(e) })
+    }
+})
+
 // ── AI stock brief (OpenAI) ────────────────────────────────────────────────
 router.get('/stock-brief/:symbol', async (c) => {
     const symbol = c.req.param('symbol').toUpperCase()
