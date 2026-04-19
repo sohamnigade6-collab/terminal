@@ -72,3 +72,6 @@ build = ["bash", "-c", "cd frontend && bun run build"]
 ALPACA_KEY_ID = "PKCWR4AIFZR3GHGBGARYEBQANU"
 ALPACA_SECRET_KEY = "9wfEBprDdwrWkjtiuDQryhih1TUTmK2fBe4bDS7Uv8iX"
 ALPACA_BASE_URL = "https://paper-api.alpaca.markets"
+
+[userenv.production]
+BACKEND_URL = "https://terminal--sohamnigade6.replit.app"
