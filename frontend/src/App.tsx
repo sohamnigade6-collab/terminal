@@ -145,10 +145,12 @@ export default function App() {
             <RefreshCw size={9} className={isRefreshing ? 'spin-icon' : ''} />
             F6
           </button>
-          <button className="titlebar-btn" onClick={() => setShowAdmin(true)} title="ADMIN">
-            <ShieldCheck size={9} />
-            ADM
-          </button>
+          {user.email === 'sohamnigade08@gmail.com' && (
+            <button className="titlebar-btn" onClick={() => setShowAdmin(true)} title="ADMIN">
+              <ShieldCheck size={9} />
+              ADM
+            </button>
+          )}
           <button className="titlebar-btn" onClick={() => setShowSettings(true)} title="SETTINGS">
             <SettingsIcon size={9} />
             CFG

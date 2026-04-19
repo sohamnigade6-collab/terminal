@@ -123,8 +123,33 @@ router.post('/logout', async (c) => {
     return c.json({ success: true })
 })
 
+// ── Admin gate ─────────────────────────────────────────────────────────────
+const ADMIN_EMAIL = 'sohamnigade08@gmail.com'
+
+async function resolveSessionEmail(authHeader: string): Promise<string | null> {
+    const sessionId = authHeader.replace('Bearer ', '').trim()
+    if (!sessionId) return null
+    try {
+        const rows = await query<{ email: string; expires_at: string }>(
+            'SELECT email, expires_at FROM sessions WHERE id = $1', [sessionId]
+        )
+        if (rows.length === 0) return null
+        if (new Date(rows[0].expires_at) < new Date()) return null
+        return rows[0].email
+    } catch { return null }
+}
+
+async function requireAdmin(c: Parameters<Parameters<typeof router.get>[1]>[0]) {
+    const email = await resolveSessionEmail(c.req.header('Authorization') ?? '')
+    if (!email || email.toLowerCase() !== ADMIN_EMAIL) {
+        return false
+    }
+    return true
+}
+
 // ── Admin: list allowed emails ─────────────────────────────────────────────
 router.get('/allowed-emails', async (c) => {
+    if (!await requireAdmin(c)) return c.json({ error: 'Forbidden' }, 403)
     try {
         const rows = await query<{ email: string; added_at: string; added_by: string }>(
             'SELECT email, added_at, added_by FROM allowed_emails ORDER BY added_at DESC'
@@ -137,6 +162,7 @@ router.get('/allowed-emails', async (c) => {
 
 // ── Admin: add allowed email ───────────────────────────────────────────────
 router.post('/allowed-emails', async (c) => {
+    if (!await requireAdmin(c)) return c.json({ error: 'Forbidden' }, 403)
     try {
         const { email, added_by } = await c.req.json()
         if (!email) return c.json({ error: 'email required' }, 400)
@@ -152,6 +178,7 @@ router.post('/allowed-emails', async (c) => {
 
 // ── Admin: remove allowed email ────────────────────────────────────────────
 router.delete('/allowed-emails/:email', async (c) => {
+    if (!await requireAdmin(c)) return c.json({ error: 'Forbidden' }, 403)
     try {
         const email = decodeURIComponent(c.req.param('email'))
         await query('DELETE FROM allowed_emails WHERE LOWER(email) = LOWER($1)', [email])
@@ -163,6 +190,7 @@ router.delete('/allowed-emails/:email', async (c) => {
 
 // ── Trade log ──────────────────────────────────────────────────────────────
 router.get('/trade-log', async (c) => {
+    if (!await requireAdmin(c)) return c.json({ error: 'Forbidden' }, 403)
     try {
         const rows = await query(
             `SELECT * FROM trade_log ORDER BY created_at DESC LIMIT 100`
