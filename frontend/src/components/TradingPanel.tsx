@@ -184,6 +184,7 @@ export function TradingPanel() {
     // Stock info
     const [stockNews, setStockNews] = useState<StockNewsItem[]>([])
     const [stockBrief, setStockBrief] = useState<string | null>(null)
+    const [stockMeta, setStockMeta] = useState<{ sector?: string; industry?: string; country?: string; longName?: string; exchange?: string } | null>(null)
     const [loadingInfo, setLoadingInfo] = useState(false)
     const [infoSymbol, setInfoSymbol] = useState('')
 
@@ -282,6 +283,7 @@ export function TradingPanel() {
         setLoadingInfo(true)
         setStockNews([])
         setStockBrief(null)
+        setStockMeta(null)
         setInfoSymbol(sym)
         try {
             const [newsRes, briefRes] = await Promise.all([
@@ -292,6 +294,9 @@ export function TradingPanel() {
             const brief = await briefRes.json()
             setStockNews(Array.isArray(news) ? news : [])
             setStockBrief(brief.brief ?? null)
+            if (brief.sector || brief.industry || brief.country || brief.longName || brief.exchange) {
+                setStockMeta({ sector: brief.sector, industry: brief.industry, country: brief.country, longName: brief.longName, exchange: brief.exchange })
+            }
         } catch { /* ignore */ } finally {
             setLoadingInfo(false)
         }
@@ -729,7 +734,14 @@ export function TradingPanel() {
                         <div className="stock-info-panel">
                             {/* Refresh button */}
                             <div className="stock-info-topbar">
-                                <span className="stock-info-sym">{chartSymbol}</span>
+                                <span className="stock-info-sym">
+                                    {chartSymbol}
+                                    {stockMeta?.longName && (
+                                        <span style={{ fontWeight: 400, color: 'var(--bb-gray)', fontSize: '8px', marginLeft: 6 }}>
+                                            {stockMeta.longName}
+                                        </span>
+                                    )}
+                                </span>
                                 <button
                                     className="stock-info-refresh"
                                     onClick={() => { setInfoSymbol(''); fetchStockInfo(chartSymbol) }}
@@ -747,17 +759,25 @@ export function TradingPanel() {
                                 </div>
                             ) : (
                                 <>
-                                    {/* AI Brief */}
+                                    {/* Company Overview */}
                                     <div className="stock-brief-card">
                                         <div className="stock-brief-label">
                                             <Brain size={9} style={{ color: 'var(--bb-orange)' }} />
-                                            AI BRIEF
+                                            OVERVIEW
                                         </div>
+                                        {stockMeta && (
+                                            <div className="stock-meta-tags">
+                                                {stockMeta.exchange && <span className="stock-meta-tag">{stockMeta.exchange}</span>}
+                                                {stockMeta.sector && <span className="stock-meta-tag">{stockMeta.sector}</span>}
+                                                {stockMeta.industry && <span className="stock-meta-tag">{stockMeta.industry}</span>}
+                                                {stockMeta.country && <span className="stock-meta-tag">{stockMeta.country}</span>}
+                                            </div>
+                                        )}
                                         {stockBrief ? (
                                             <p className="stock-brief-text">{stockBrief}</p>
                                         ) : (
                                             <p className="stock-brief-text" style={{ color: 'var(--bb-gray)', fontStyle: 'italic' }}>
-                                                No AI brief available — OPENAI_API_KEY required.
+                                                No overview available for this symbol.
                                             </p>
                                         )}
                                     </div>

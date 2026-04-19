@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   Globe, TrendingUp, MapPin, Brain,
   AlertTriangle, RefreshCw, Settings as SettingsIcon,
-  Wifi, WifiOff, CandlestickChart, LogOut, User, ShieldCheck,
+  Wifi, WifiOff, CandlestickChart, LogOut, User, ShieldCheck, Calendar,
 } from 'lucide-react'
 import { useSettings } from './hooks/useSettings.ts'
 import { useDashboard } from './hooks/useDashboard.ts'
@@ -12,12 +12,13 @@ import { MarketsPanel } from './components/MarketsPanel.tsx'
 import { LocalPanel } from './components/LocalPanel.tsx'
 import { IntelPanel } from './components/IntelPanel.tsx'
 import { TradingPanel } from './components/TradingPanel.tsx'
+import { EarningsPanel } from './components/EarningsPanel.tsx'
 import { LoginScreen } from './components/LoginScreen.tsx'
 import { SettingsModal } from './components/SettingsModal.tsx'
 import { AdminPanel } from './components/AdminPanel.tsx'
 import './index.css'
 
-type TabId = 'news' | 'markets' | 'local' | 'intel' | 'trading'
+type TabId = 'news' | 'markets' | 'local' | 'intel' | 'trading' | 'earnings'
 
 const TABS: Array<{ id: TabId; label: string; fkey: string; icon: React.ReactNode }> = [
   { id: 'news', label: 'GLOBAL NEWS', fkey: 'F1', icon: <Globe size={11} /> },
@@ -25,6 +26,7 @@ const TABS: Array<{ id: TabId; label: string; fkey: string; icon: React.ReactNod
   { id: 'local', label: 'LOCAL', fkey: 'F3', icon: <MapPin size={11} /> },
   { id: 'intel', label: 'INTEL BRIEF', fkey: 'F4', icon: <Brain size={11} /> },
   { id: 'trading', label: 'TRADING', fkey: 'F5', icon: <CandlestickChart size={11} /> },
+  { id: 'earnings', label: 'EARNINGS', fkey: 'F6', icon: <Calendar size={11} /> },
 ]
 
 export default function App() {
@@ -55,7 +57,7 @@ export default function App() {
       if (e.key === 'F3') { e.preventDefault(); setActiveTab('local') }
       if (e.key === 'F4') { e.preventDefault(); setActiveTab('intel') }
       if (e.key === 'F5') { e.preventDefault(); setActiveTab('trading') }
-      if (e.key === 'F6') { e.preventDefault(); fetchData() }
+      if (e.key === 'F6') { e.preventDefault(); setActiveTab('earnings') }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
@@ -256,6 +258,11 @@ export default function App() {
         {activeTab === 'trading' && (
           <div className="tab-pane tab-pane-trading">
             <TradingPanel />
+          </div>
+        )}
+        {activeTab === 'earnings' && (
+          <div className="tab-pane">
+            <EarningsPanel />
           </div>
         )}
       </main>

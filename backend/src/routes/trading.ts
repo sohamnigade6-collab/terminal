@@ -160,41 +160,67 @@ router.get('/quote/:symbol', async (c) => {
     }
 })
 
-// ── AI stock brief (OpenAI) ────────────────────────────────────────────────
+// ── Company overview via Yahoo Finance + Wikipedia (fully free, no API key) ─
 router.get('/stock-brief/:symbol', async (c) => {
     const symbol = c.req.param('symbol').toUpperCase()
-    const apiKey = process.env.OPENAI_API_KEY ?? ''
-    if (!apiKey) {
-        return c.json({ brief: null, error: 'No OPENAI_API_KEY set' })
-    }
     try {
-        const res = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${apiKey}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                model: 'gpt-4o-mini',
-                max_tokens: 280,
-                temperature: 0.4,
-                messages: [
-                    {
-                        role: 'system',
-                        content: 'You are a concise financial analyst. Reply in plain text, no markdown, no bullets. 3 sentences maximum.',
-                    },
-                    {
-                        role: 'user',
-                        content: `Give a brief overview of the company with ticker symbol ${symbol}: what it does, its sector, and its current market relevance. Be factual and concise.`,
-                    },
-                ],
-            }),
-            signal: AbortSignal.timeout(20000),
+        // Step 1: get company longName from Yahoo Finance v8 chart (already working)
+        const chartRes = await fetch(
+            `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`,
+            {
+                headers: { Accept: 'application/json', 'User-Agent': 'Mozilla/5.0' },
+                signal: AbortSignal.timeout(8000),
+            }
+        )
+        const chartData = await chartRes.json() as {
+            chart?: { result?: Array<{ meta?: { longName?: string; shortName?: string; currency?: string; exchangeName?: string } }> }
+        }
+        const meta = chartData.chart?.result?.[0]?.meta
+        const longName = meta?.longName ?? meta?.shortName ?? symbol
+        const exchange = meta?.exchangeName ?? null
+
+        // Step 2: Wikipedia REST API for company description (completely free, no key)
+        const wikiRes = await fetch(
+            `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(longName)}`,
+            {
+                headers: { 'User-Agent': 'AOBTerminal/1.0 (financial dashboard; contact: user)' },
+                signal: AbortSignal.timeout(8000),
+            }
+        )
+        let brief: string | null = null
+        if (wikiRes.ok) {
+            const wikiData = await wikiRes.json() as { extract?: string; type?: string }
+            if (wikiData.extract && wikiData.type !== 'disambiguation') {
+                // Trim to ~5 sentences
+                const sentences = wikiData.extract.split(/(?<=[.!?])\s+/)
+                brief = sentences.slice(0, 5).join(' ')
+            }
+        }
+        // If Wikipedia failed (e.g. obscure ticker), try with shortName
+        if (!brief && meta?.shortName && meta.shortName !== longName) {
+            const wikiRes2 = await fetch(
+                `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(meta.shortName)}`,
+                {
+                    headers: { 'User-Agent': 'AOBTerminal/1.0' },
+                    signal: AbortSignal.timeout(6000),
+                }
+            )
+            if (wikiRes2.ok) {
+                const d = await wikiRes2.json() as { extract?: string; type?: string }
+                if (d.extract && d.type !== 'disambiguation') {
+                    const sentences = d.extract.split(/(?<=[.!?])\s+/)
+                    brief = sentences.slice(0, 5).join(' ')
+                }
+            }
+        }
+
+        return c.json({
+            brief,
+            longName,
+            exchange,
+            sector: null,
+            industry: null,
         })
-        const data = await res.json() as { choices?: Array<{ message: { content: string } }>; error?: { message: string } }
-        if (data.error) throw new Error(data.error.message)
-        const brief = data.choices?.[0]?.message?.content?.trim() ?? ''
-        return c.json({ brief })
     } catch (e) {
         return c.json({ brief: null, error: String(e) })
     }

@@ -7,6 +7,7 @@ import weatherRouter from './routes/weather.ts'
 import intelRouter from './routes/intel.ts'
 import tradingRouter from './routes/trading.ts'
 import authRouter from './routes/auth.ts'
+import earningsRouter from './routes/earnings.ts'
 
 const app = new Hono().basePath('/api')
 
@@ -37,5 +38,6 @@ app.route('/markets', marketsRouter)
 app.route('/weather', weatherRouter)
 app.route('/intel', intelRouter)
 app.route('/trading', tradingRouter)
+app.route('/earnings', earningsRouter)
 
 export default app
