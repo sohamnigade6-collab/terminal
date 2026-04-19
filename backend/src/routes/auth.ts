@@ -5,8 +5,8 @@ import crypto from 'crypto'
 
 const router = new Hono()
 
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID ?? ''
-const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET ?? ''
+const GOOGLE_CLIENT_ID = (process.env.GOOGLE_CLIENT_ID ?? '').trim()
+const GOOGLE_CLIENT_SECRET = (process.env.GOOGLE_CLIENT_SECRET ?? '').trim()
 const REPLIT_DOMAIN = process.env.REPLIT_DEV_DOMAIN ?? 'localhost:5000'
 const REDIRECT_URI = `https://${REPLIT_DOMAIN}/api/auth/google/callback`
 const SESSION_TTL_DAYS = 30
