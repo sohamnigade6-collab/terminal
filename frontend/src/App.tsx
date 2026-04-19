@@ -2,15 +2,17 @@ import { useState, useEffect } from 'react'
 import {
   Globe, TrendingUp, MapPin, Brain,
   AlertTriangle, RefreshCw, Settings as SettingsIcon,
-  Wifi, WifiOff, CandlestickChart,
+  Wifi, WifiOff, CandlestickChart, LogOut, User,
 } from 'lucide-react'
 import { useSettings } from './hooks/useSettings.ts'
 import { useDashboard } from './hooks/useDashboard.ts'
+import { useAuth } from './contexts/AuthContext.tsx'
 import { NewsPanel } from './components/NewsPanel.tsx'
 import { MarketsPanel } from './components/MarketsPanel.tsx'
 import { LocalPanel } from './components/LocalPanel.tsx'
 import { IntelPanel } from './components/IntelPanel.tsx'
 import { TradingPanel } from './components/TradingPanel.tsx'
+import { LoginScreen } from './components/LoginScreen.tsx'
 import { SettingsModal } from './components/SettingsModal.tsx'
 import './index.css'
 
@@ -25,6 +27,7 @@ const TABS: Array<{ id: TabId; label: string; fkey: string; icon: React.ReactNod
 ]
 
 export default function App() {
+  const { user, loading: authLoading, logout } = useAuth()
   const { settings, save } = useSettings()
   const { state, fetchData, fetchIntel } = useDashboard(settings)
   const [activeTab, setActiveTab] = useState<TabId>('news')
@@ -55,6 +58,25 @@ export default function App() {
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
   }, [fetchData])
+
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <div style={{
+        height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
+        background: 'var(--bb-black)', color: 'var(--bb-orange)', fontFamily: 'var(--font-mono)',
+        fontSize: 11, letterSpacing: '0.1em', gap: 8,
+      }}>
+        <span className="spinner" style={{ borderTopColor: 'var(--bb-orange)' }} />
+        AUTHENTICATING...
+      </div>
+    )
+  }
+
+  // Show login screen if not authenticated
+  if (!user) {
+    return <LoginScreen />
+  }
 
   const criticalCount = state.globalNews.filter((n) => n.level === 'CRITICAL').length
   const isRefreshing = state.loading.globalNews || state.loading.markets
@@ -94,6 +116,16 @@ export default function App() {
         <div className="titlebar-spacer" />
 
         <div className="titlebar-right">
+          {/* Logged-in user */}
+          <span className="titlebar-user">
+            {user.avatar ? (
+              <img src={user.avatar} className="titlebar-avatar" alt="" referrerPolicy="no-referrer" />
+            ) : (
+              <User size={9} />
+            )}
+            <span>{user.email}</span>
+          </span>
+          <div className="titlebar-sep" />
           <span className="titlebar-loc">
             <MapPin size={9} />
             {settings.city.toUpperCase()}
@@ -114,6 +146,9 @@ export default function App() {
           <button className="titlebar-btn" onClick={() => setShowSettings(true)} title="SETTINGS">
             <SettingsIcon size={9} />
             CFG
+          </button>
+          <button className="titlebar-btn" onClick={logout} title="LOGOUT">
+            <LogOut size={9} />
           </button>
         </div>
       </div>
@@ -152,7 +187,6 @@ export default function App() {
 
         <div className="tabbar-spacer" />
 
-        {/* Live index tickers */}
         {state.markets && (
           <div className="tabbar-status">
             {state.markets.indices.slice(0, 3).map((idx) => (

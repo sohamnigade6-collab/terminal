@@ -1974,3 +1974,152 @@ body {
     flex: 1;
   }
 }
+
+/* ── Login Screen ──────────────────────────────────────────────────────────── */
+
+.login-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bb-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  overflow: hidden;
+}
+
+.login-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bb-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bb-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.login-card {
+  position: relative;
+  width: 340px;
+  background: var(--bb-panel);
+  border: 1px solid var(--bb-border2);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 60px rgba(0, 230, 118, 0.07), 0 8px 40px rgba(0,0,0,0.8);
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--bb-orange);
+}
+
+.login-subtitle {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--bb-gray);
+  margin-top: -10px;
+}
+
+.login-divider {
+  height: 1px;
+  background: var(--bb-border2);
+  margin: 4px 0;
+}
+
+.login-tagline {
+  font-size: 10px;
+  color: var(--bb-gray);
+  letter-spacing: 0.06em;
+}
+
+.login-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--bb-down);
+  background: rgba(255, 61, 61, 0.07);
+  border: 1px solid rgba(255, 61, 61, 0.2);
+  padding: 8px 10px;
+  line-height: 1.5;
+}
+
+.login-error svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.login-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 16px;
+  background: transparent;
+  border: 1px solid var(--bb-border2);
+  color: var(--bb-fg);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.login-google-btn:hover {
+  background: rgba(0, 230, 118, 0.06);
+  border-color: var(--bb-orange);
+  color: var(--bb-orange);
+}
+
+.login-footer {
+  font-size: 9px;
+  color: var(--bb-gray);
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+
+/* ── Titlebar user ──────────────────────────────────────────────────────────── */
+
+.titlebar-user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: var(--bb-gray);
+  letter-spacing: 0.06em;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.titlebar-avatar {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--bb-border2);
+}
+
+/* ── Spinner utility ─────────────────────────────────────────────────────── */
+
+.spinner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(0, 230, 118, 0.2);
+  border-top-color: var(--bb-orange);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

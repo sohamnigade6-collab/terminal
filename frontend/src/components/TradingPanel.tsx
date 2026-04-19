@@ -3,6 +3,7 @@ import {
     TrendingUp, TrendingDown, RefreshCw, X, ChevronDown,
     DollarSign, Activity, BarChart2, Clock, AlertCircle,
 } from 'lucide-react'
+import { useAuth } from '../contexts/AuthContext.tsx'
 
 const API = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '')
 
@@ -152,6 +153,7 @@ function timeAgo(iso: string) {
 // ── Main Component ─────────────────────────────────────────────────────────
 
 export function TradingPanel() {
+    const { authHeader, user } = useAuth()
     const [account, setAccount] = useState<Account | null>(null)
     const [positions, setPositions] = useState<Position[]>([])
     const [orders, setOrders] = useState<Order[]>([])
@@ -229,7 +231,7 @@ export function TradingPanel() {
             }
             const res = await fetch(`${API}/api/trading/orders`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', ...authHeader() },
                 body: JSON.stringify(body),
             })
             const data = await res.json()
@@ -247,10 +249,10 @@ export function TradingPanel() {
 
     const cancelOrder = useCallback(async (id: string) => {
         try {
-            await fetch(`${API}/api/trading/orders/${id}`, { method: 'DELETE' })
+            await fetch(`${API}/api/trading/orders/${id}`, { method: 'DELETE', headers: authHeader() })
             setTimeout(fetchOrders, 800)
         } catch { /* ignore */ }
-    }, [fetchOrders])
+    }, [fetchOrders, authHeader])
 
     const loadSymbol = () => {
         const s = symbol.trim().toUpperCase()
