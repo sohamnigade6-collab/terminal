@@ -115,17 +115,6 @@ router.delete('/orders/:id', requireAuth, async (c) => {
     }
 })
 
-// ── Quote ──────────────────────────────────────────────────────────────────
-router.get('/quote/:symbol', async (c) => {
-    try {
-        const symbol = c.req.param('symbol').toUpperCase()
-        const data = await alpacaFetch(`/v2/stocks/${symbol}/quotes/latest`)
-        return c.json(data)
-    } catch (e) {
-        return c.json({ error: String(e) }, 500)
-    }
-})
-
 // ── Stock news (Alpaca data API) ───────────────────────────────────────────
 router.get('/stock-news/:symbol', async (c) => {
     try {
@@ -149,31 +138,24 @@ router.get('/stock-news/:symbol', async (c) => {
     }
 })
 
-// ── Latest quote / price for a symbol ─────────────────────────────────────
+// ── Latest quote / price via Yahoo Finance ────────────────────────────────
 router.get('/quote/:symbol', async (c) => {
     const symbol = c.req.param('symbol').toUpperCase()
     try {
         const res = await fetch(
-            `https://data.alpaca.markets/v2/stocks/${encodeURIComponent(symbol)}/bars/latest`,
+            `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1d`,
             {
-                headers: {
-                    'APCA-API-KEY-ID': KEY_ID,
-                    'APCA-API-SECRET-KEY': SECRET_KEY,
-                    Accept: 'application/json',
-                },
+                headers: { Accept: 'application/json', 'User-Agent': 'Mozilla/5.0' },
                 signal: AbortSignal.timeout(8000),
             }
         )
-        if (!res.ok) {
-            const txt = await res.text().catch(() => '')
-            console.error('[quote] Alpaca error', res.status, txt.slice(0, 200))
-            return c.json({ symbol, price: null, error: `Alpaca ${res.status}` })
+        if (!res.ok) return c.json({ symbol, price: null, error: `YF ${res.status}` })
+        const data = await res.json() as {
+            chart?: { result?: Array<{ meta?: { regularMarketPrice?: number } }>; error?: unknown }
         }
-        const data = await res.json() as { bar?: { c?: number } }
-        const price = data.bar?.c ?? null
+        const price = data.chart?.result?.[0]?.meta?.regularMarketPrice ?? null
         return c.json({ symbol, price })
     } catch (e) {
-        console.error('[quote] fetch error:', String(e))
         return c.json({ symbol, price: null, error: String(e) })
     }
 })
