@@ -126,4 +126,67 @@ router.get('/quote/:symbol', async (c) => {
     }
 })
 
+// ── Stock news (Alpaca data API) ───────────────────────────────────────────
+router.get('/stock-news/:symbol', async (c) => {
+    try {
+        const symbol = c.req.param('symbol').toUpperCase()
+        const res = await fetch(
+            `https://data.alpaca.markets/v1beta1/news?symbols=${symbol}&limit=12&sort=desc`,
+            {
+                headers: {
+                    'APCA-API-KEY-ID': KEY_ID,
+                    'APCA-API-SECRET-KEY': SECRET_KEY,
+                    Accept: 'application/json',
+                },
+                signal: AbortSignal.timeout(10000),
+            }
+        )
+        if (!res.ok) throw new Error(`Alpaca news ${res.status}`)
+        const data = await res.json() as { news: Array<{ id: number; headline: string; summary: string; author: string; created_at: string; url: string; source: string; symbols: string[] }> }
+        return c.json(data.news ?? [])
+    } catch (e) {
+        return c.json({ error: String(e) }, 500)
+    }
+})
+
+// ── AI stock brief (OpenAI) ────────────────────────────────────────────────
+router.get('/stock-brief/:symbol', async (c) => {
+    const symbol = c.req.param('symbol').toUpperCase()
+    const apiKey = process.env.OPENAI_API_KEY ?? ''
+    if (!apiKey) {
+        return c.json({ brief: null, error: 'No OPENAI_API_KEY set' })
+    }
+    try {
+        const res = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                model: 'gpt-4o-mini',
+                max_tokens: 280,
+                temperature: 0.4,
+                messages: [
+                    {
+                        role: 'system',
+                        content: 'You are a concise financial analyst. Reply in plain text, no markdown, no bullets. 3 sentences maximum.',
+                    },
+                    {
+                        role: 'user',
+                        content: `Give a brief overview of the company with ticker symbol ${symbol}: what it does, its sector, and its current market relevance. Be factual and concise.`,
+                    },
+                ],
+            }),
+            signal: AbortSignal.timeout(20000),
+        })
+        const data = await res.json() as { choices?: Array<{ message: { content: string } }>; error?: { message: string } }
+        if (data.error) throw new Error(data.error.message)
+        const brief = data.choices?.[0]?.message?.content?.trim() ?? ''
+        return c.json({ brief })
+    } catch (e) {
+        return c.json({ brief: null, error: String(e) })
+    }
+})
+
 export default router

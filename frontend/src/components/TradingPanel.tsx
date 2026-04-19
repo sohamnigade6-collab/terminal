@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import {
     TrendingUp, TrendingDown, RefreshCw, X, ChevronDown,
-    DollarSign, Activity, BarChart2, Clock, AlertCircle,
+    DollarSign, Activity, BarChart2, Clock, AlertCircle, Newspaper, Brain,
 } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext.tsx'
 
@@ -44,9 +44,21 @@ interface Order {
     limit_price: string | null
 }
 
+interface StockNewsItem {
+    id: number
+    headline: string
+    summary: string
+    author: string
+    created_at: string
+    url: string
+    source: string
+    symbols: string[]
+}
+
 type OrderSide = 'buy' | 'sell'
 type OrderType = 'market' | 'limit'
 type TimeInForce = 'day' | 'gtc' | 'ioc' | 'fok'
+type RightTab = 'order' | 'positions' | 'orders' | 'info'
 
 // ── TradingView Widget ─────────────────────────────────────────────────────
 
@@ -58,49 +70,37 @@ function TradingViewChart({ symbol }: { symbol: string }) {
         if (!containerRef.current) return
         containerRef.current.innerHTML = ''
 
-        const containerId = `tv_${symbol.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`
-        containerRef.current.id = containerId
-
         const script = document.createElement('script')
-        script.type = 'text/javascript'
-        script.src = 'https://s3.tradingview.com/tv.js'
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js'
         script.async = true
-        script.onload = () => {
-            if (!containerRef.current) return
-            // @ts-ignore
-            new window.TradingView.widget({
-                autosize: true,
-                symbol: symbol.toUpperCase(),
-                interval: 'D',
-                timezone: 'Etc/UTC',
-                theme: 'dark',
-                style: '1',
-                locale: 'en',
-                toolbar_bg: '#060806',
-                enable_publishing: false,
-                hide_legend: false,
-                hide_top_toolbar: false,
-                hide_side_toolbar: false,
-                allow_symbol_change: true,
-                save_image: false,
-                container_id: containerId,
-                overrides: {
-                    'paneProperties.background': '#060806',
-                    'paneProperties.backgroundGradientStartColor': '#060806',
-                    'paneProperties.backgroundGradientEndColor': '#080a08',
-                    'paneProperties.vertGridProperties.color': '#1a221a',
-                    'paneProperties.horzGridProperties.color': '#1a221a',
-                    'symbolWatermarkProperties.transparency': 90,
-                    'scalesProperties.textColor': '#6a7a6a',
-                    'mainSeriesProperties.candleStyle.upColor': '#00e676',
-                    'mainSeriesProperties.candleStyle.downColor': '#ff3d3d',
-                    'mainSeriesProperties.candleStyle.wickUpColor': '#00e676',
-                    'mainSeriesProperties.candleStyle.wickDownColor': '#ff3d3d',
-                    'mainSeriesProperties.candleStyle.borderUpColor': '#00e676',
-                    'mainSeriesProperties.candleStyle.borderDownColor': '#ff3d3d',
-                },
-            })
-        }
+        script.innerHTML = JSON.stringify({
+            autosize: true,
+            symbol: `NASDAQ:${symbol}`,
+            interval: 'D',
+            timezone: 'Etc/UTC',
+            theme: 'dark',
+            style: '1',
+            locale: 'en',
+            backgroundColor: '#060806',
+            gridColor: '#1a1f1a',
+            allow_symbol_change: false,
+            save_image: false,
+            hide_top_toolbar: false,
+            hide_side_toolbar: false,
+            withdateranges: true,
+            details: false,
+            hotlist: false,
+            calendar: false,
+            overrides: {
+                'paneProperties.background': '#060806',
+                'paneProperties.backgroundType': 'solid',
+                'scalesProperties.textColor': '#6a7a6a',
+                'mainSeriesProperties.candleStyle.upColor': '#00e676',
+                'mainSeriesProperties.candleStyle.downColor': '#ff3d3d',
+                'mainSeriesProperties.candleStyle.borderUpColor': '#00e676',
+                'mainSeriesProperties.candleStyle.borderDownColor': '#ff3d3d',
+            },
+        })
         document.head.appendChild(script)
         scriptRef.current = script
 
@@ -152,8 +152,19 @@ function timeAgo(iso: string) {
 
 // ── Main Component ─────────────────────────────────────────────────────────
 
+const MIN_CHART_PCT = 25
+const MAX_CHART_PCT = 82
+const DEFAULT_CHART_PCT = 65
+
 export function TradingPanel() {
-    const { authHeader, user } = useAuth()
+    const { authHeader } = useAuth()
+
+    // Layout
+    const [chartWidthPct, setChartWidthPct] = useState(DEFAULT_CHART_PCT)
+    const layoutRef = useRef<HTMLDivElement>(null)
+    const isDragging = useRef(false)
+
+    // Data
     const [account, setAccount] = useState<Account | null>(null)
     const [positions, setPositions] = useState<Position[]>([])
     const [orders, setOrders] = useState<Order[]>([])
@@ -163,9 +174,15 @@ export function TradingPanel() {
     const [error, setError] = useState<string | null>(null)
     const [orderError, setOrderError] = useState<string | null>(null)
     const [orderSuccess, setOrderSuccess] = useState<string | null>(null)
-    const [rightTab, setRightTab] = useState<'order' | 'positions' | 'orders'>('order')
+    const [rightTab, setRightTab] = useState<RightTab>('order')
 
-    // Order form state
+    // Stock info
+    const [stockNews, setStockNews] = useState<StockNewsItem[]>([])
+    const [stockBrief, setStockBrief] = useState<string | null>(null)
+    const [loadingInfo, setLoadingInfo] = useState(false)
+    const [infoSymbol, setInfoSymbol] = useState('')
+
+    // Order form
     const [symbol, setSymbol] = useState('AAPL')
     const [chartSymbol, setChartSymbol] = useState('AAPL')
     const [side, setSide] = useState<OrderSide>('buy')
@@ -174,6 +191,31 @@ export function TradingPanel() {
     const [limitPrice, setLimitPrice] = useState('')
     const [tif, setTif] = useState<TimeInForce>('day')
 
+    // ── Resize drag ──────────────────────────────────────────────────────────
+    useEffect(() => {
+        const onMove = (e: MouseEvent) => {
+            if (!isDragging.current || !layoutRef.current) return
+            e.preventDefault()
+            const rect = layoutRef.current.getBoundingClientRect()
+            const pct = ((e.clientX - rect.left) / rect.width) * 100
+            setChartWidthPct(Math.min(MAX_CHART_PCT, Math.max(MIN_CHART_PCT, pct)))
+        }
+        const onUp = () => { isDragging.current = false; document.body.style.cursor = '' }
+        window.addEventListener('mousemove', onMove)
+        window.addEventListener('mouseup', onUp)
+        return () => {
+            window.removeEventListener('mousemove', onMove)
+            window.removeEventListener('mouseup', onUp)
+        }
+    }, [])
+
+    const onDragHandleDown = (e: React.MouseEvent) => {
+        e.preventDefault()
+        isDragging.current = true
+        document.body.style.cursor = 'col-resize'
+    }
+
+    // ── Data fetching ────────────────────────────────────────────────────────
     const fetchAccount = useCallback(async () => {
         setLoadingAccount(true)
         try {
@@ -205,6 +247,26 @@ export function TradingPanel() {
         }
     }, [])
 
+    const fetchStockInfo = useCallback(async (sym: string) => {
+        if (!sym) return
+        setLoadingInfo(true)
+        setStockNews([])
+        setStockBrief(null)
+        setInfoSymbol(sym)
+        try {
+            const [newsRes, briefRes] = await Promise.all([
+                fetch(`${API}/api/trading/stock-news/${sym}`),
+                fetch(`${API}/api/trading/stock-brief/${sym}`),
+            ])
+            const news = await newsRes.json()
+            const brief = await briefRes.json()
+            setStockNews(Array.isArray(news) ? news : [])
+            setStockBrief(brief.brief ?? null)
+        } catch { /* ignore */ } finally {
+            setLoadingInfo(false)
+        }
+    }, [])
+
     useEffect(() => {
         fetchAccount()
         fetchOrders()
@@ -212,6 +274,14 @@ export function TradingPanel() {
         return () => clearInterval(t)
     }, [fetchAccount, fetchOrders])
 
+    // Auto-fetch info when INFO tab opens or symbol changes
+    useEffect(() => {
+        if (rightTab === 'info' && chartSymbol !== infoSymbol) {
+            fetchStockInfo(chartSymbol)
+        }
+    }, [rightTab, chartSymbol, infoSymbol, fetchStockInfo])
+
+    // ── Actions ──────────────────────────────────────────────────────────────
     const placeOrder = useCallback(async () => {
         if (!symbol || !qty) { setOrderError('Symbol and quantity are required'); return }
         setSubmitting(true)
@@ -245,7 +315,7 @@ export function TradingPanel() {
         } finally {
             setSubmitting(false)
         }
-    }, [symbol, qty, side, orderType, limitPrice, tif, fetchAccount, fetchOrders])
+    }, [symbol, qty, side, orderType, limitPrice, tif, fetchAccount, fetchOrders, authHeader])
 
     const cancelOrder = useCallback(async (id: string) => {
         try {
@@ -256,13 +326,20 @@ export function TradingPanel() {
 
     const loadSymbol = () => {
         const s = symbol.trim().toUpperCase()
-        if (s) setChartSymbol(s)
+        if (s) {
+            setChartSymbol(s)
+            setInfoSymbol('') // reset so info refetches
+        }
     }
 
+    const pendingOrderCount = orders.filter(o =>
+        ['new', 'accepted', 'pending_new', 'partially_filled'].includes(o.status)
+    ).length
+
     return (
-        <div className="trading-layout">
+        <div className="trading-layout" ref={layoutRef}>
             {/* ── Left: TradingView Chart ─────────────────────────────── */}
-            <div className="trading-chart-col">
+            <div className="trading-chart-col" style={{ width: `${chartWidthPct}%` }}>
                 <div className="trading-chart-header">
                     <span className="trading-chart-label">
                         <BarChart2 size={11} style={{ color: 'var(--bb-orange)' }} />
@@ -287,6 +364,15 @@ export function TradingPanel() {
                 <div className="trading-chart-body">
                     <TradingViewChart symbol={chartSymbol} />
                 </div>
+            </div>
+
+            {/* ── Resize Handle ───────────────────────────────────────── */}
+            <div
+                className="trading-resize-handle"
+                onMouseDown={onDragHandleDown}
+                title="Drag to resize"
+            >
+                <div className="trading-resize-grip" />
             </div>
 
             {/* ── Right: Account + Order Panel ────────────────────────── */}
@@ -331,34 +417,29 @@ export function TradingPanel() {
 
                 {/* Right sub-tabs */}
                 <div className="trading-right-tabs">
-                    {(['order', 'positions', 'orders'] as const).map((t) => (
+                    {([
+                        { id: 'order', icon: <Activity size={9} />, label: 'ORDER' },
+                        { id: 'positions', icon: <TrendingUp size={9} />, label: 'POSITIONS', badge: positions.length > 0 ? positions.length : 0 },
+                        { id: 'orders', icon: <Clock size={9} />, label: 'ORDERS', badge: pendingOrderCount },
+                        { id: 'info', icon: <Newspaper size={9} />, label: 'INFO' },
+                    ] as Array<{ id: RightTab; icon: React.ReactNode; label: string; badge?: number }>).map((t) => (
                         <button
-                            key={t}
-                            className={`trading-rtab ${rightTab === t ? 'trading-rtab-active' : ''}`}
-                            onClick={() => setRightTab(t)}
+                            key={t.id}
+                            className={`trading-rtab ${rightTab === t.id ? 'trading-rtab-active' : ''}`}
+                            onClick={() => setRightTab(t.id)}
                         >
-                            {t === 'order' && <Activity size={9} />}
-                            {t === 'positions' && <TrendingUp size={9} />}
-                            {t === 'orders' && <Clock size={9} />}
-                            {t.toUpperCase()}
-                            {t === 'positions' && positions.length > 0 && (
-                                <span className="trading-rtab-badge">{positions.length}</span>
-                            )}
-                            {t === 'orders' && orders.filter(o => o.status === 'new' || o.status === 'accepted' || o.status === 'pending_new').length > 0 && (
-                                <span className="trading-rtab-badge">
-                                    {orders.filter(o => o.status === 'new' || o.status === 'accepted' || o.status === 'pending_new').length}
-                                </span>
-                            )}
+                            {t.icon}
+                            {t.label}
+                            {!!t.badge && <span className="trading-rtab-badge">{t.badge}</span>}
                         </button>
                     ))}
                 </div>
 
                 {/* Tab content */}
                 <div className="trading-right-body">
-                    {/* ── Order Form ─────────────────────────────────────────── */}
+                    {/* ── Order Form ──────────────────────────────────────── */}
                     {rightTab === 'order' && (
                         <div className="order-form">
-                            {/* Side toggle */}
                             <div className="order-side-toggle">
                                 <button
                                     className={`order-side-btn order-side-buy ${side === 'buy' ? 'active' : ''}`}
@@ -374,7 +455,6 @@ export function TradingPanel() {
                                 </button>
                             </div>
 
-                            {/* Symbol */}
                             <div className="order-field">
                                 <label className="order-label">SYMBOL</label>
                                 <input
@@ -386,7 +466,6 @@ export function TradingPanel() {
                                 />
                             </div>
 
-                            {/* Order type */}
                             <div className="order-field">
                                 <label className="order-label">ORDER TYPE</label>
                                 <div className="order-type-toggle">
@@ -402,7 +481,6 @@ export function TradingPanel() {
                                 </div>
                             </div>
 
-                            {/* Quantity */}
                             <div className="order-field">
                                 <label className="order-label">QUANTITY (SHARES)</label>
                                 <input
@@ -416,7 +494,6 @@ export function TradingPanel() {
                                 />
                             </div>
 
-                            {/* Limit price (conditional) */}
                             {orderType === 'limit' && (
                                 <div className="order-field">
                                     <label className="order-label">LIMIT PRICE ($)</label>
@@ -432,7 +509,6 @@ export function TradingPanel() {
                                 </div>
                             )}
 
-                            {/* Time in force */}
                             <div className="order-field">
                                 <label className="order-label">TIME IN FORCE</label>
                                 <div className="order-select-wrap">
@@ -450,7 +526,6 @@ export function TradingPanel() {
                                 </div>
                             </div>
 
-                            {/* Submit */}
                             <button
                                 className={`order-submit-btn ${side === 'buy' ? 'order-submit-buy' : 'order-submit-sell'}`}
                                 onClick={placeOrder}
@@ -465,7 +540,6 @@ export function TradingPanel() {
                                 )}
                             </button>
 
-                            {/* Feedback */}
                             {orderError && (
                                 <div className="order-feedback order-feedback-err">
                                     <AlertCircle size={10} /> {orderError}
@@ -477,7 +551,6 @@ export function TradingPanel() {
                                 </div>
                             )}
 
-                            {/* Order summary card */}
                             {qty && symbol && (
                                 <div className="order-summary">
                                     <div className="order-summary-row">
@@ -508,7 +581,7 @@ export function TradingPanel() {
                         </div>
                     )}
 
-                    {/* ── Positions ──────────────────────────────────────────── */}
+                    {/* ── Positions ────────────────────────────────────────── */}
                     {rightTab === 'positions' && (
                         <div className="positions-panel">
                             {positions.length === 0 ? (
@@ -545,7 +618,7 @@ export function TradingPanel() {
                         </div>
                     )}
 
-                    {/* ── Orders History ─────────────────────────────────────── */}
+                    {/* ── Orders History ───────────────────────────────────── */}
                     {rightTab === 'orders' && (
                         <div className="orders-panel">
                             {loadingOrders && orders.length === 0 ? (
@@ -593,6 +666,78 @@ export function TradingPanel() {
                                         </div>
                                     )
                                 })
+                            )}
+                        </div>
+                    )}
+
+                    {/* ── Stock Info ───────────────────────────────────────── */}
+                    {rightTab === 'info' && (
+                        <div className="stock-info-panel">
+                            {/* Refresh button */}
+                            <div className="stock-info-topbar">
+                                <span className="stock-info-sym">{chartSymbol}</span>
+                                <button
+                                    className="stock-info-refresh"
+                                    onClick={() => { setInfoSymbol(''); fetchStockInfo(chartSymbol) }}
+                                    disabled={loadingInfo}
+                                    title="Refresh"
+                                >
+                                    <RefreshCw size={9} className={loadingInfo ? 'spin-icon' : ''} />
+                                    REFRESH
+                                </button>
+                            </div>
+
+                            {loadingInfo ? (
+                                <div className="trading-loading-mini" style={{ padding: '20px 12px' }}>
+                                    <RefreshCw size={10} className="spin-icon" /> LOADING...
+                                </div>
+                            ) : (
+                                <>
+                                    {/* AI Brief */}
+                                    <div className="stock-brief-card">
+                                        <div className="stock-brief-label">
+                                            <Brain size={9} style={{ color: 'var(--bb-orange)' }} />
+                                            AI BRIEF
+                                        </div>
+                                        {stockBrief ? (
+                                            <p className="stock-brief-text">{stockBrief}</p>
+                                        ) : (
+                                            <p className="stock-brief-text" style={{ color: 'var(--bb-gray)', fontStyle: 'italic' }}>
+                                                No AI brief available — OPENAI_API_KEY required.
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    {/* News */}
+                                    <div className="stock-news-label">
+                                        <Newspaper size={9} style={{ color: 'var(--bb-orange)' }} />
+                                        LATEST NEWS
+                                    </div>
+                                    {stockNews.length === 0 ? (
+                                        <div className="trading-empty" style={{ minHeight: 60 }}>
+                                            <span>No recent news found</span>
+                                        </div>
+                                    ) : (
+                                        stockNews.map((n) => (
+                                            <a
+                                                key={n.id}
+                                                href={n.url}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="stock-news-item"
+                                            >
+                                                <div className="stock-news-headline">{n.headline}</div>
+                                                {n.summary && (
+                                                    <div className="stock-news-summary">{n.summary}</div>
+                                                )}
+                                                <div className="stock-news-meta">
+                                                    <span>{n.source}</span>
+                                                    <span>{timeAgo(n.created_at)}</span>
+                                                </div>
+                                            </a>
+                                        ))
+                                    )}
+                                </>
                             )}
                         </div>
                     )}
