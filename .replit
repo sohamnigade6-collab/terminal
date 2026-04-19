@@ -57,9 +57,13 @@ externalPort = 80
 localPort = 5001
 externalPort = 3000
 
+[[ports]]
+localPort = 5999
+externalPort = 3002
+
 [deployment]
 deploymentTarget = "autoscale"
-run = ["bash", "-c", "(cd backend && bun run start) & (sleep 2 && cd frontend && bun run preview)"]
+run = ["bash", "-c", "cd backend && PUBLIC_DIR=../frontend/dist bun run start"]
 build = ["bash", "-c", "cd frontend && bun run build"]
 
 [userenv]

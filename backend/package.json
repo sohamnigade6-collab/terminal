@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "echo 'No build step required — Vercel handles TypeScript compilation'"
+    "build": "cd .. && bun --cwd frontend run build",
+    "start": "PUBLIC_DIR=../frontend/dist bun run src/index.ts"
   },
   "dependencies": {
     "@types/pg": "^8.20.0",

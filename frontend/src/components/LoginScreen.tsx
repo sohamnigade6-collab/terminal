@@ -5,7 +5,6 @@ const API = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '')
 
 export function LoginScreen() {
     const [error, setError] = useState<string | null>(null)
-    const [email, setEmail] = useState<string | null>(null)
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search)
@@ -14,7 +13,6 @@ export function LoginScreen() {
         if (err) {
             if (err === 'not_authorized') {
                 setError(`Access denied for ${em ?? 'this account'}. Your email is not on the authorized list.`)
-                setEmail(em)
             } else if (err === 'callback_failed') {
                 setError('Authentication failed. Please try again.')
             } else {

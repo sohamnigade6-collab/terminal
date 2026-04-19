@@ -50,14 +50,6 @@ function changeClass(v: number) {
     return 'flat'
 }
 
-const MarketColHeader = ({ cols }: { cols: string[] }) => (
-    <div className="market-col-header">
-        {cols.map((c, i) => (
-            <span key={i} className={i >= 2 ? 'market-col-right' : ''}>{c}</span>
-        ))}
-    </div>
-)
-
 interface Props {
     data: MarketsData | null
     loading: boolean

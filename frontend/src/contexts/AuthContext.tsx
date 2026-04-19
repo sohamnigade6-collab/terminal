@@ -92,7 +92,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const authHeader = useCallback(() => {
         const token = state.token ?? localStorage.getItem(SESSION_KEY) ?? ''
-        return token ? { Authorization: `Bearer ${token}` } : {}
+        return { Authorization: token ? `Bearer ${token}` : '' }
     }, [state.token])
 
     return (
